@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -15,9 +16,27 @@ export default function Home() {
         <h1 className={styles.title}>Welcome to my side project!</h1>
 
         <p className={styles.description}>
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          I'm trying to build a website with <strong>Next.js</strong> that supports teams to organize themselves.
+          I&apos;m trying to build a website with <strong>Next.js</strong> that supports teams to organize themselves.
         </p>
+        <h2>TODOS:</h2>
+        <ol>
+          <li>✅ Add static homepage</li>
+          <li>✅ Add Typescript</li>
+          <li>✅ Add eslint</li>
+          <li>✅ Add prettier</li>
+          <li>✅ add about page</li>
+          <li>add scss support</li>
+          <li>Connect to Vercel</li>
+          <li>add mui</li>
+          <li>Add jest</li>
+          <li>Create login page</li>
+          <li>Setup database</li>
+          <li>Add notifications</li>
+          <li>
+            Make it a{' '}
+            <a href="https://itnext.io/pwa-with-next-js-create-next-app-in-2020-%EF%B8%8F-9ee0e1a6313d">PWA</a>
+          </li>
+        </ol>
       </main>
 
       <footer className={styles.footer}>
@@ -29,24 +48,10 @@ export default function Home() {
           Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>{' '}
         |{' '}
-        <Link href="/about-me">
+        <Link href="/about">
           <a>about me</a>
         </Link>
       </footer>
     </div>
   )
 }
-
-// Add static homepage
-// Add Typescript
-// Add eslint
-// Add prettier
-// add about page
-// add scss support
-// Connect to Vercel
-// add mui
-// Add jest
-// Create login page
-// Setup database
-// Add notifications
-// Make it a pwa // https://itnext.io/pwa-with-next-js-create-next-app-in-2020-%EF%B8%8F-9ee0e1a6313d
