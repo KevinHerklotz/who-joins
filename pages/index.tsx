@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -11,14 +12,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to my side project!
-        </h1>
+        <h1 className={styles.title}>Welcome to my side project!</h1>
 
         <p className={styles.description}>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           I'm trying to build a website with <strong>Next.js</strong> that supports teams to organize themselves.
         </p>
-
       </main>
 
       <footer className={styles.footer}>
@@ -27,11 +26,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-        {' '}|{' '}
-        <Link href={`/about-me`}>about me</Link>
+          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+        </a>{' '}
+        |{' '}
+        <Link href="/about-me">
+          <a>about me</a>
+        </Link>
       </footer>
     </div>
   )
@@ -39,9 +39,9 @@ export default function Home() {
 
 // Add static homepage
 // Add Typescript
-// add about page
 // Add eslint
 // Add prettier
+// add about page
 // add scss support
 // Connect to Vercel
 // add mui
