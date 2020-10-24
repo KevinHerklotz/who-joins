@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
@@ -25,11 +25,13 @@ export default function Home() {
           <li>✅ Add eslint</li>
           <li>✅ Add prettier</li>
           <li>✅ add about page</li>
-          <li>add scss support</li>
-          <li>Connect to Vercel</li>
+          <li>✅ add scss support</li>
+          <li>add scss linter</li>
           <li>add mui</li>
-          <li>Add jest</li>
+          <li>Connect to Vercel</li>
+          <li>Add Header and Footer to every page</li>
           <li>Create login page</li>
+          <li>Add jest</li>
           <li>Setup database</li>
           <li>Add notifications</li>
           <li>
@@ -48,7 +50,7 @@ export default function Home() {
           Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>{' '}
         |{' '}
-        <Link href="/about">
+        <Link href="/about2">
           <a>about me</a>
         </Link>
       </footer>
