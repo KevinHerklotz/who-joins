@@ -1,18 +1,24 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import Head from 'next/head'
 import Link from 'next/link'
+import React, { useState } from 'react'
 
 import styles from './index.module.scss'
 
 export default function Home() {
+  const [testText, setTestText] = useState('initialState (SSR)')
+  React.useEffect(() => {
+    setTestText('updated')
+  })
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Who joins</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
+        <h1>{testText}</h1>
         <h1 className={styles.title}>Welcome to my side project!</h1>
 
         <p className={styles.description}>
@@ -34,8 +40,7 @@ export default function Home() {
           <li>✅ add MUI</li>
           <li>✅ fix Prettier overwriting eslint</li>
           <li>✅ add directory shortcuts</li>
-          <li>Connect to Vercel</li>
-          <li>check Lighthouse</li>
+          <li>✅ Connect to Vercel</li>
           <li>Add Header and Footer to every page</li>
           <li>Create login page</li>
           <li>Add jest</li>
@@ -47,6 +52,7 @@ export default function Home() {
             {' '}
             <a href="https://itnext.io/pwa-with-next-js-create-next-app-in-2020-%EF%B8%8F-9ee0e1a6313d">PWA</a>
           </li>
+          <li>check Lighthouse</li>
         </ol>
       </main>
 
