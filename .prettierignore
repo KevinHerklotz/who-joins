@@ -1,4 +1,10 @@
+# scss is done by StyleLint
 *.scss
+# JS/TS is done by eslint 
+*.tsx
+*.ts
+*.jsx
+*.js
 # Copied from .gitignore
 # Unfortunately prettier does not yet support to import from .gitignore
 # There is a CLI options, but this doesn't help when using an IDE plugin

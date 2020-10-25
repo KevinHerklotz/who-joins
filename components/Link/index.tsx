@@ -7,24 +7,26 @@ import * as React from 'react'
 
 type NextComposedProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & NextLinkProps
 
-const NextComposed = React.forwardRef<HTMLAnchorElement, NextComposedProps>((props: NextComposedProps, ref) => {
+const NextComposed = React.forwardRef<HTMLAnchorElement, NextComposedProps>(
+  (props: NextComposedProps, ref) => {
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  const { as, href, replace, scroll, passHref, shallow, prefetch, ...other } = props
+    const { as, href, replace, scroll, passHref, shallow, prefetch, ...other } = props
 
-  return (
-    <NextLink
-      href={href}
-      prefetch={prefetch}
-      as={as}
-      replace={replace}
-      scroll={scroll}
-      shallow={shallow}
-      passHref={passHref}
-    >
-      <a ref={ref} {...other} />
-    </NextLink>
-  )
-})
+    return (
+      <NextLink
+        href={href}
+        prefetch={prefetch}
+        as={as}
+        replace={replace}
+        scroll={scroll}
+        shallow={shallow}
+        passHref={passHref}
+      >
+        <a ref={ref} {...other} />
+      </NextLink>
+    )
+  },
+)
 
 interface LinkPropsBase {
   activeClassName?: string
@@ -42,15 +44,30 @@ function Link(props: LinkProps) {
 
   const router = useRouter()
   const pathname = typeof href === 'string' ? href : href.pathname
-  const className = clsx(classNameProps, {
-    [activeClassName]: router.pathname === pathname && activeClassName,
-  })
+  const className = clsx(classNameProps, { [activeClassName]: router.pathname === pathname && activeClassName })
 
   if (naked) {
-    return <NextComposed className={className} ref={innerRef} href={href} {...other} />
+    return (
+      <NextComposed
+        className={className}
+        ref={innerRef}
+        href={href}
+        {...other}
+      />
+    )
   }
 
-  return <MuiLink component={NextComposed} className={className} ref={innerRef} href={href as string} {...other} />
+  return (
+    <MuiLink
+      component={NextComposed}
+      className={className}
+      ref={innerRef}
+      href={href as string}
+      {...other}
+    />
+  )
 }
 
-export default React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => <Link {...props} innerRef={ref} />)
+export default React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
+  <Link {...props} innerRef={ref} />
+))

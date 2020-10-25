@@ -16,7 +16,11 @@ export default function Home() {
         <h1 className={styles.title}>Welcome to my side project!</h1>
 
         <p className={styles.description}>
-          I&apos;m trying to build a website with <strong>Next.js</strong> that supports teams to organize themselves.
+          I&apos;m trying to build a website with
+          {' '}
+          <strong>Next.js</strong>
+          {' '}
+          that supports teams to organize themselves.
         </p>
         <h2>TODOS:</h2>
         <ol>
@@ -28,7 +32,7 @@ export default function Home() {
           <li>✅ add scss support</li>
           <li>✅ add scss linter</li>
           <li>✅ add MUI</li>
-          <li>fix Prettier overwriting eslint</li>
+          <li>✅ fix Prettier overwriting eslint</li>
           <li>add directory shortcuts</li>
           <li>Connect to Vercel</li>
           <li>check lighthouse</li>
@@ -37,8 +41,10 @@ export default function Home() {
           <li>Add jest</li>
           <li>Setup database</li>
           <li>Add notifications</li>
+          <li>Light theme dark theme</li>
           <li>
-            Make it a{' '}
+            Make it a
+            {' '}
             <a href="https://itnext.io/pwa-with-next-js-create-next-app-in-2020-%EF%B8%8F-9ee0e1a6313d">PWA</a>
           </li>
         </ol>
@@ -50,9 +56,13 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>{' '}
-        |{' '}
+          Powered by
+          {' '}
+          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+        </a>
+        {' '}
+        |
+        {' '}
         <Link href="/about">
           <a>about me</a>
         </Link>

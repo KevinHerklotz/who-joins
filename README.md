@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ### Linting
 
-For linting (TypeScript and SCSS) and fromatting this project uses Prettier, ESLint and stylesint.
+For linting and fromatting this project uses Prettier, ESLint and stylesint.
 It is very much recommended to use [VSCode](https://code.visualstudio.com/), because it will auto format/fix all your code automatically for you once you save a file.
 In order for that to work you need to install the following plugins:
 

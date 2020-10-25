@@ -15,8 +15,6 @@ export default function About() {
         <Link naked href="/">
           Go to the main page
         </Link>
-        {/* <ProTip /> */}
-        {/* <Copyright /> */}
       </Box>
     </Container>
   )

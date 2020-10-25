@@ -51,10 +51,9 @@ MyDocument.getInitialProps = async (context) => {
   const sheets = new ServerStyleSheets()
   const originalRenderPage = context.renderPage
 
-  context.renderPage = () =>
-    originalRenderPage({
-      enhanceApp: (App) => (properties) => sheets.collect(<App {...properties} />),
-    })
+  context.renderPage = () => originalRenderPage(
+    { enhanceApp: (App) => (properties) => sheets.collect(<App {...properties} />) },
+  )
 
   const initialProperties = await Document.getInitialProps(context)
 
