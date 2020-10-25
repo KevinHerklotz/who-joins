@@ -166,16 +166,7 @@ module.exports = {
     'unicorn/prefer-flat-map': ERROR,
     'unicorn/prefer-replace-all': ERROR,
     'unicorn/numeric-separators-style': ERROR,
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        replacements: {
-          res: false,
-          req: false,
-          env: false,
-        },
-      },
-    ],
+    'unicorn/prevent-abbreviations': OFF,
     'prettier/prettier': ERROR,
     radix: [ERROR, 'as-needed'],
     'react/jsx-filename-extension': [
