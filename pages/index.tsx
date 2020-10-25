@@ -33,9 +33,9 @@ export default function Home() {
           <li>✅ add scss linter</li>
           <li>✅ add MUI</li>
           <li>✅ fix Prettier overwriting eslint</li>
-          <li>add directory shortcuts</li>
+          <li>✅ add directory shortcuts</li>
           <li>Connect to Vercel</li>
-          <li>check lighthouse</li>
+          <li>check Lighthouse</li>
           <li>Add Header and Footer to every page</li>
           <li>Create login page</li>
           <li>Add jest</li>

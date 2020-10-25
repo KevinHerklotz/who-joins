@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
 
-import Link from '../../components/Link'
+import Link from '#components/Link'
 
 export default function About() {
   return (

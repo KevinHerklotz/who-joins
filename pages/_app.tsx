@@ -1,12 +1,12 @@
+import '../styles/globals.scss'
+
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider } from '@material-ui/core/styles'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 
-import theme from '../styles/theme'
-
-import '../styles/globals.scss'
+import theme from '#styles/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
