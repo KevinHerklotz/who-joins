@@ -1,11 +1,15 @@
 {
+  // only important if there might be a globally installed yarn as well:
   "eslint.packageManager": "yarn",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
+  // disable build in linters, to prevent conflicts with stylelint:
   "css.validate": false,
   "less.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  // Otherwise VSCode might use another TS version:
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

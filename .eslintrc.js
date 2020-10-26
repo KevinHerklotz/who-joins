@@ -185,6 +185,8 @@ module.exports = {
         extensions: ['.tsx'],
       },
     ],
+    'react-hooks/exhaustive-deps': ERROR,
+    'react-hooks/rules-of-hooks': ERROR,
     'react/jsx-max-props-per-line': [ERROR, { maximum: 3 }],
     'react/jsx-one-expression-per-line': [ERROR, { allow: 'single-child' }], // or 'literal' maybe?
     'react/jsx-props-no-spreading': OFF,

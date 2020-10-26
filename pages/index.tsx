@@ -9,7 +9,7 @@ export default function Home() {
   const [testText, setTestText] = useState('initialState (SSR)')
   React.useEffect(() => {
     setTestText('updated')
-  })
+  }, [])
 
   return (
     <div className={styles.container}>
